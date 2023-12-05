@@ -1,0 +1,85 @@
+.nav{
+    margin-bottom: 40px;
+}
+.container{
+    margin: auto;
+    width: 1190px;
+}
+.container div{
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #DDDDDD;
+    text-indent: 1em;
+    font-family: '宋体';
+}
+.container .top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    background-color: #F2F2F2;
+}
+.container .top input{
+    width: 156px;
+    height: 26px;
+    border: 1px solid #DDDDDD;
+    text-indent: 1em;
+}
+.container .top button{
+    position: absolute;
+    right: 3px;
+    top:15px;
+    border: 0;
+    color: #5F6AF2;
+    font-size: 12px;
+    cursor: pointer;
+}
+.container div+div span{
+   float: left;
+    width: 100px;
+    height: 39px;
+    background-color: #EDEDED;
+    color: #919191;
+    font-size:12px ;
+    text-align: center;
+    text-indent: 0;
+    font-weight: bold;
+}
+.container ul li{
+    float: left;
+    width: 100px;
+    font-size: 12px;
+    color: #666;
+    text-indent: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.commodityShow{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin: auto;
+    width: 1190px;
+    margin-bottom: 60px;
+}
+.commodityShow span{
+    color: #dd3333;
+    font-weight: bold;
+    font-size: 14px;
+}
+.commodityShow  p{
+    font-size: 13px;
+    color: #494949;
+}
+.commodityShow img{
+    width: 200px;
+    height: 200px;
+}
+.commodityShow div{
+    margin-right: 130px;
+}
+.commodityShow div:nth-of-type(4n){
+    margin-right: 0px;
+}

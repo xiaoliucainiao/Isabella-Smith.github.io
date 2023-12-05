@@ -1,0 +1,152 @@
+/* 公共样式 */
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 12px;
+    /* cursor: none; */
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearFloat::after,
+.clearFloat::before{
+    display: block;
+    clear: both;
+    content: '';
+}
+.c92b2d5{
+    color: #92b2d5;
+}
+.c7096a7{
+    color: #7096a7;
+}
+input {
+    caret-color: rgba(0, 0, 255, 0.589);
+    color: black;
+  }
+/* 背景 */
+body{
+    background-color: #DAEFF8;
+}
+.login{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 650px;
+    height: 415px;
+    background-color: #f2fafe;
+    border-radius:5px ;
+    box-shadow: 3px 3px 6px #c5d9e1;
+}
+.login .left,.right{
+    width: 325px;
+    height: 415px;
+    text-align: center;
+}
+.login span{
+    display: inline-block;
+    margin-top: 135px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.login  p {
+    margin-top: 5px;
+    color: #a597bb;
+}
+.login  p:nth-of-type(2){
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+.login button{
+    width: 93px;
+    height: 28px;
+    background-color: #fff;
+    border: 1px solid #a597bb;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #46aad7;
+    transition: all .5s ease;
+}
+.login button:hover{
+    background-color: #ABD8EC;
+    color: #fff;
+    border: 0;
+}
+.login .masking{
+    position: absolute;
+    /* left: 295px; */
+    left: 35px;
+    top: -45px;
+    width: 320px;
+    height: 500px;
+    background-color: #abd8ec;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 3px 3px 6px #c5d9e1;
+    transition: all 1s;
+}
+.masking span{
+    margin-top: 163px;
+    color: #fff;
+}
+.masking form input{
+    margin-top: 10px;
+    width: 230px;
+    height: 35px;
+    background-color: rgba(0,0, 0,0);
+    border: 0;
+    border-bottom: 2px solid #fff;
+    text-indent: 1em;
+    outline:none;
+}
+/* ::-webkit-input-placeholder */
+/* .masking form input */
+::placeholder{
+    color: #fff;
+}
+/* input警告提示 */
+.warning::placeholder{
+    color: red;
+}
+.masking form button{
+    margin-top: 30px;
+    /* width: 200px;
+    height: 25px; */
+    width: 224px;
+    height: 44px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 0;
+    color: #46aad7;
+    cursor: pointer;
+}
+.masking form button:hover{
+    background-color: #46aad7;
+    color: #fff;
+    transition: all 1s ease;
+}
+.masking .top,.bottom{
+    position: absolute;
+    transition: all 1s;
+}
+.masking .bottom{
+    height: 500px;
+    background-color: #abd8ec;
+    /* z-index: -1; */
+    border-radius: 6px;
+}
+.masking .bottom span{
+    margin-top: 60px;
+}
+.masking .bottom form input[type='radio']{
+    width: 30px;
+    height: 10px;
+}

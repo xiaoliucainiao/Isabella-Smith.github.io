@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>热卖商品新闻</title>
+                <!-- 新 Bootstrap5 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+<!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+<script src="../utils/jQuery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<!-- Bootstrap-table -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css">
+
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
+  <!--========================-->
+    <link rel="stylesheet" href="../../public/css/index-data.css" />
+    <link rel="stylesheet" href="../../public/css/iction-data.css" />
+    <script src="../utils/mock.js"></script>
+    <script src="../utils/id.js"></script>
+    <script src="../utils/time.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <div>
+        <span>企业管理后台</span>
+        <p>欢迎<span id="user"></span>登录</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <ul>
+        <li><span class="iconfont icon-shouye"></span>首页</li>
+        <li><span class="iconfont icon-shangpin"></span>商城首页</li>
+        <ul>
+          <li>轮播图</li>
+          <li>关于我们</li>
+          <li>热卖商品新闻</li>
+          <li>热卖商品图片</li>
+          <li>背景附着上</li>
+          <li>背景附着中</li>
+          <li>背景附着下</li>
+          <li>赞助商</li>
+        </ul>
+        <li><span class="iconfont icon-bianjiwenzhang_huaban"></span>所有商品</li>
+        <ul>
+          <li>商品展示</li>
+        </ul>
+        <li><span class="iconfont icon-shezhi"></span>商品动态</li>
+        <ul>
+          <li>商品动态</li>
+        </ul>
+        <li><span class="iconfont icon-tuichuxitong"></span>退出系统</li>
+      </ul>
+      <div class="right">
+        <span style="font-size: 12px; color: #94989e">商品/商品分类</span>
+        <div>
+          <div class="left">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="add">
+              增加
+            </button>
+            <button  id="modifys" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="">
+              <span class="iconfont icon-xiugai " ></span>修改
+            </button>
+            <button id="dele">
+              <span class="iconfont icon-shanchu"></span>删除
+            </button>
+            <button id="refresh">
+              <span class="iconfont icon-shuaxin"></span>刷新
+            </button>
+          </div>
+          
+        </div>
+        <table>
+         
+        </table>
+      </div>
+    </div>
+
+
+
+    <!-- 增加窗口===================================== -->
+    <div class="modal fade mask" id="myModal">
+      <div class="modal-dialog addwin ">
+        <div class="modal-content">
+    
+          <!-- 模态框头部 -->
+          <div class="modal-header">
+            <h4 class="modal-title">增加窗口</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- 模态框内容 -->
+          <div class="modal-body">
+            <form>
+              <div style="flex-direction: column">
+                展示图片:<input type="file"  accept="image/" style="border: 0;"/>
+                展示标题:<input type="text" />
+                  展示内容:<textarea  rows="3" cols="15"></textarea>
+                <img style="width: 200px; height: 100px;">
+              </div>
+            </form>
+          </div>
+    
+          <!-- 模态框底部 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger fi" data-bs-dismiss="modal" >关闭</button>
+            <button type="button" onclick="lunboData()" class="btn btn-primary" data-bs-dismiss="modal">添加</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    <!-- 修改窗口====================================================== -->
+    <div class="modal fade maskTwo" id="myModalT" >
+      <div class="modal-dialog addwin ">
+        <div class="modal-content">
+    
+          <!-- 模态框头部 -->
+          <div class="modal-header">
+            <h4 class="modal-title">修改窗口</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- 模态框内容 -->
+          <div class="modal-body">
+            <form>
+              <div style="flex-direction: column">
+                展示图片:<input type="file"  accept="image/" style="border: 0;"/>
+                展示标题:<input type="text" />
+                  展示内容:<textarea  rows="3" cols="15"></textarea>
+                <img style="width: 200px; height: 100px;">
+              </div>
+            </form>
+          </div>
+    
+          <!-- 模态框底部 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="xiugai">修改</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="mask">
+      <div class="addwin">
+        <span class="left">新增窗口</span>
+        <span class="right iconfont icon-cuowu"></span>
+        <form>
+          <div style="flex-direction: column">
+            展示图片:<input type="file"  accept="image/" style="border: 0;"/>
+            展示标题:<input type="text" />
+              展示内容:<textarea  rows="3" cols="15"></textarea>
+            <img style="width: 200px; height: 100px;">
+          </div>
+          <button type="button">取消</button>
+          <button type="button" onclick="lunboData()">新增</button>
+        </form>
+      </div>
+    </div>
+    <div class="maskTwo">
+      <div class="addwin">
+        <span class="left">修改窗口</span>
+        <span class="right iconfont icon-cuowu"></span>
+        <form>
+          <div style="flex-direction: column">
+            轮播图片:<input type="file"  accept="image/" style="border: 0;"/>
+            轮播标题:<input type="text" />
+            展示内容:<textarea  rows="3" cols="15"></textarea>
+            <img style="width: 200px; height: 100px;">
+          </div>
+          <button type="button">取消</button>
+          <button type="button">修改</button>
+        </form>
+      </div>
+    </div> -->
+    <!-- <div class="mas">
+        <div class="masn">
+        </div>
+    </div> -->
+    <script src="../../public/js/data-public.js"></script>
+    <script src="../api/indexHotSelling-dataAPI.js"></script>
+    <script src="../components/indexHotSelling-data.js"></script>
+    
+  </body>
+</html>

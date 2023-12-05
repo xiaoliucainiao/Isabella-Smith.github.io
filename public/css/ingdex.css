@@ -1,0 +1,333 @@
+/* 轮播图1 */
+.lunbo{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin:100px auto;
+   }
+   .lunbo img{
+    position: absolute;
+    top : 0;
+    width: 100%;
+    height:auto;
+    opacity: 0;
+    /* transition: all 2s ease-in-out; */
+   }
+   .lunbo img.active {
+    opacity: 1;
+  }
+  /* 轮播图2 */
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: 100% 900px;
+    background-position: center;
+    transition: all 2s ease-in-out;
+    text-align: center;
+    line-height: 600px;
+    color: #fff;
+  }
+  .slideshow span{
+    font-size:52px ;
+    text-shadow: 0px 0px 4px #666666;
+    font-weight: bold;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+  }
+  .slideshow  a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 85px;
+    margin-left: -128.5px;
+    width: 257px;
+    height: 76px;
+    line-height: 76px;
+    background-color: #fff;
+    font-weight:bold;
+    font-size: 14px;
+    color: rgb(0, 29, 93);
+    transition: all .2s ease-in-out;
+  }
+  .slideshow  a:hover{
+    background-color: #F0F0F0;
+  }
+  .aboutUs{
+  position: relative;
+  }
+  .aboutUs .content{
+    position: relative;
+    margin: auto;
+    height: 143px;
+    width: 1380px;
+    height: 143px;
+    border-bottom:1px solid #CECECE ;
+  }
+  .aboutUs .content span{
+    position: absolute;
+    bottom: 0;
+    width: 111px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #1365F2;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.aboutUs .content span:last-of-type{
+position: absolute;
+    left: 80px;
+    bottom: -4px;
+    font-size: 15px;
+    color: #bababa;
+    border: 0;
+}
+.aboutUs .img{
+    float: right;
+    width: 70%;
+    height: 748px;
+    background-image: url(../images/lunbo-2.webp) ;
+    background-position: center;
+    background-size: cover;
+}
+.aboutUs .text{
+    display: flex;
+   position: absolute;
+   top: 232px;
+   left: 257px;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 350px;
+}
+.aboutUs .text h1{
+    width: 200px;
+}
+.aboutUs .text span{
+    width: 307px;
+    line-height: 35px;
+}
+.aboutUs .text a{
+    width: 103px;
+    height: 37px;
+    border: 1px solid black;
+    font-size: 12px;
+    text-align: center;
+    line-height: 37px;
+    color: black;
+    transition: all .2s ease-in-out;
+}
+.aboutUs .text a:hover{
+    background-color: black;
+    color: #fff;
+}
+/* 热卖商品 */
+.data-commodity .title{
+    display: flex;
+    margin: auto;
+    width: 1190px;
+    height: 103px;
+    border-bottom:1px solid #CECECE ;
+    line-height: 160px;
+}
+.data-commodity .title h3{
+    border-bottom: 1px solid #1365F2;
+}
+.data-commodity .title span{
+    font-size: 15px;
+    color: #bababa;
+}
+.data-commodity .data-show{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* align-content: space-around; */
+    padding-top: 35px;
+    margin: auto;
+    width: 1190px;
+    height: 781px;
+}
+.data-commodity  .data-show div{
+    overflow: hidden;
+    padding-top:20px ;
+    text-align: center;
+    width: 281px;
+    height: 327px;
+    border: 1px solid rgba(229,229,229,1);
+    font-size: 15px;
+    color: #666;
+    transition: all .6s ease;
+    transform: rotateY('angle');
+}
+/* div过度*/
+.data-commodity  .data-show div:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 1px  15px 50px 10px #E2E2E2;
+}
+.data-commodity  .data-show div:hover img{
+    transition: all 1s ease;
+    transform:scale(1.1);
+}
+.data-commodity  .data-show img{
+    width: 278px;
+    height: 205px;
+}
+.data-commodity .data-show font{
+    color: red;
+    margin-left: 10px;
+}
+.data-commodity .data-show p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    height: 41px;
+    line-height: 41px;
+    background-image: linear-gradient(to right, red,blue);
+    background-size: 0px 2px;
+    background-repeat: no-repeat;
+    transition: all .6s ease 0s;
+    background-position: left bottom;
+    color: #999;
+}
+.data-commodity  .data-show div:hover p{
+    background-size: 100% 2px;
+}
+.data-commodityBom{
+    margin-bottom: 150px;
+}
+.data-commodityBom .title{
+    display: flex;
+    margin: auto;
+    width: 1190px;
+    height: 103px;
+    border-bottom:1px solid #CECECE ;
+    line-height: 160px;
+}
+.data-commodityBom .title h3{
+    border-bottom: 1px solid #1365F2;
+}
+.data-commodityBom .title span{
+    font-size: 15px;
+    color: #bababa;
+}
+.data-commodityBom .data-show{
+    padding-top: 30px;
+    margin: auto;
+    width: 1190px;
+}
+.data-commodityBom .left{
+    display: flex;
+    height: 441px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.data-commodityBom .data-show .text{
+    width: 773px;
+    height: 210px;
+    border:1px solid rgba(221,221,221,1);
+}
+.data-commodityBom .text{
+    display: flex;
+    flex-wrap: wrap
+}
+.data-commodityBom .text div{
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 460px;
+}
+.data-commodityBom .text div span,p{
+    font-size: 13px;
+    color: #777;
+}
+.data-commodityBom .text img{
+    margin: 4px;
+    width: 280px;
+    height: 200px;
+}
+.data-commodityBom .data-show .right{
+    width: 390px;
+    height: 441px;
+    background-image: url(../images/data-showRight.webp);
+    background-repeat: no-repeat;
+}
+.bglist .pic,.picTwo,.picSur{
+    height: 457px;
+    background-image: url(../images/lunbo-3.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+}
+.bglist  span{
+    display: inline-block;
+    /* height: 100px; */
+    width: 296px;
+}
+.bglist strong{
+    display: inline-block;
+    margin-top: 195px;
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+.bglist  {
+    line-height: 30px;
+}
+.bglist .picTwo{
+    background-image: url(../images/lunbo-1.webp);
+}
+.bglist .picSur{
+    background-image: url(../images/lunbo-4.webp);
+}
+.bglist .picSur strong{
+    margin-top: 120px;
+}
+.bglist .picSur  a{
+    display: inline-block;
+    margin-top: 20px;
+    width: 257px;
+    height: 76px;
+    line-height: 76px;
+    background-color: #fff;
+    font-weight:bold;
+    font-size: 14px;
+    color: rgb(0, 29, 93);
+    transition: all .2s ease-in-out;
+  }
+  .bglist .picSur a:hover{
+    background-color: #F0F0F0;
+  }
+/* 过度 */
+/* 右淡入 */
+@keyframes rihght {
+    0%{
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.rightSlidingIn{
+     animation-name: rihght;
+}
+/* 上淡入 */
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.passUp{
+    animation-name: up;
+}
+/* 文字显示过度 */
+.slideshow span.show{
+    opacity: 1;
+}

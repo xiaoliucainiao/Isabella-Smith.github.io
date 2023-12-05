@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品地区</title>
+      <!-- 新 Bootstrap5 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+<!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+<script src="../utils/jQuery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<!-- Bootstrap-table -->
+<script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
+    
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="../../public/css/anamie.min.css">
+    <script src="../../public/js/wow.min.js"></script>
+    <link rel="stylesheet" href="../../public/css/index-data.css" />
+    <link rel="stylesheet" href="../../public/css/iction-data.css" />
+    <script src="../utils/mock.js"></script>
+    <script src="../utils/id.js"></script>
+    <script src="../utils/time.js"></script>
+    <style>
+       table th{
+            width: 345px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div>
+        <span>企业管理后台</span>
+        <p>欢迎<span id="user"></span>登录</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <ul>
+        <li><span class="iconfont icon-shouye"></span>首页</li>
+        <li><span class="iconfont icon-shangpin"></span>商城首页</li>
+        <ul>
+          <li>轮播图</li>
+          <li>关于我们</li>
+          <li>热卖商品新闻</li>
+          <li>热卖商品图片</li>
+          <li>背景附着上</li>
+          <li>背景附着中</li>
+          <li>背景附着下</li>
+          <li>赞助商</li>
+        </ul>
+        <li><span class="iconfont icon-bianjiwenzhang_huaban"></span>所有商品</li>
+        <ul>
+          <li>商品展示</li>
+        </ul>
+        <li><span class="iconfont icon-shezhi"></span>商品动态</li>
+        <ul>
+          <li>商品动态</li>
+        </ul>
+        <li><span class="iconfont icon-tuichuxitong"></span>退出系统</li>
+      </ul>
+      <div class="right">
+        <span style="font-size: 12px; color: #94989e">商品/商品分类</span>
+        <div>
+          <div class="left">
+            <!-- <button id="add">
+              <span class="iconfont icon-xinzeng "></span>新增
+            </button> -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="add">
+              增加
+            </button>
+            <button  id="modifys" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="">
+              <span class="iconfont icon-xiugai " ></span>修改
+            </button>
+            <button id="dele">
+              <span class="iconfont icon-shanchu"></span>删除
+            </button>
+            <button id="refresh">
+              <span class="iconfont icon-shuaxin"></span>刷新
+            </button>
+          </div>
+          <!-- <div class="right">
+            <input type="text" placeholder="请输入别名" /><button
+              id="query"
+              class="iconfont icon-chaxun"
+            >
+              查询
+            </button>
+          </div> -->
+        </div>
+        <table>
+
+
+
+
+          
+          <!-- <thead id="data">
+            <th><input type="checkbox" name="" id="check" /></th>
+            <th>添加地区</th>
+            <th>地区ID</th>
+            <th>操作</th>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody> -->
+        </table>
+      </div>
+    </div>
+ <!-- 新增窗口 ==================================================-->
+    <div class="modal fade mask" id="myModal">
+      <div class="modal-dialog addwin ">
+        <div class="modal-content">
+    
+          <!-- 模态框头部 -->
+          <div class="modal-header">
+            <h4 class="modal-title">增加窗口</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- 模态框内容 -->
+          <div class="modal-body">
+            <form>
+              <div style="flex-direction: column">
+                添加地区:<input type="text"/>
+                地区ID:<input type="text"/>
+              </div>
+              <!-- <button type="button">取消</button>
+              <button type="button">添加</button> -->
+            </form>
+          </div>
+    
+          <!-- 模态框底部 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger fi" data-bs-dismiss="modal" >关闭</button>
+            <button type="button" onclick="Data()" class="btn btn-primary" data-bs-dismiss="modal">添加</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    <!-- 修改窗口====================================================== -->
+    <div class="modal fade maskTwo" id="myModalT" >
+      <div class="modal-dialog addwin ">
+        <div class="modal-content">
+    
+          <!-- 模态框头部 -->
+          <div class="modal-header">
+            <h4 class="modal-title">修改窗口</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- 模态框内容 -->
+          <div class="modal-body">
+            <form>
+              <div style="flex-direction: column">
+                修改地区:<input type="text"/>
+                地区ID:<input type="text"/>
+              </div>
+              <!-- <button type="button">取消</button>
+              <button type="button">添加</button> -->
+            </form>
+          </div>
+    
+          <!-- 模态框底部 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="xiugai">修改</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    <script src="../../public/js/data-public.js"></script> 
+   <script src="../api/allProductsPlace-dataAPI.js"></script>
+    <script src="../components/allProductsPlace-data.js"></script>
+    <script>
+       new WOW().init();
+    </script>
+  </body>
+</html>

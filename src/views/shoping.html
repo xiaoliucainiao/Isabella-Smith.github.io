@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物车</title>
+    <link rel="stylesheet" href="../../public/css/anamie.min.css">
+    <link rel="stylesheet" href="../../public/css/iconfont.css" />
+    <link rel="stylesheet" href="../../public/css/public.css" />
+    <link rel="stylesheet" href="../../public/css/dynamic.css">
+    <script src="../utils/jQuery.min.js"></script>
+    <script src="../utils/mock.js"></script>
+    <style>
+        table{
+            margin: auto;
+            width: 1190px;
+            text-align: center;
+        }
+        th,td{
+            width: 300px;
+            height: 100px;
+            border-bottom: 1px solid black;
+        }
+        table input{
+            width: 30px;
+        }
+        table img{
+            width: 150px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="concent">
+        <div class="left">
+          <span class="iconfont icon-31shijian">在线时间8:30~21:30</span>
+          <span>欢迎<font></font>访问户外网运动专卖商城！</span>
+        </div>
+        <div class="right">
+            <span class="iconfont icon-sousuoxiao" style="font-size: 16px;"></span>
+            <span class="iconfont icon-yonghu"></span>
+            <span class="iconfont icon-gouwuche"></span>
+        </div>
+      </div>
+    </div>
+    <div class="shop clearFloat">
+        <span class="left">SPORTING</span>
+        <form class="right">
+            <input type="text" placeholder="请输入商品名称"><button class="iconfont icon-sousuo" type="button"></button>
+        </form>
+    </div>
+    <div class="nav">
+        <ul>
+            <li>商城首页</li>
+            <li>所有商品</li>
+            <li>商品动态</li>
+            <li>支付方式</li>
+            <li>关于店铺</li>
+            <li>线下门店</li>
+        </ul>
+    </div>
+    <!-- 书写内容开始 -->
+    <div class="container clearFloat">
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="" id="check"></th>
+                    <th>商品图片</th>
+                    <th>商品名称</th>
+                    <th>商品价格</th>
+                    <th>商品个数</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <th colspan="7">
+                    <button type="button" id="dele">删除</button>
+                    件数:<span class="num"></span>合计:<span class="number"></span></th>
+            </tfoot>
+        </table>
+    </div>
+    <!-- 书写内容结束 -->
+    <div class="sidebar">
+        <ul>
+            <li><span class="iconfont icon-dianhua"></span></li>
+            <li><span class="iconfont icon-qq"></span></li>
+            <li><span class="iconfont icon-xiangshang3"></span></li>
+        </ul>
+    </div>
+    <div class="friendlink">
+        <div class="conter">
+          <img src="../../public/images/friendlink-1.webp" alt="">
+        <img src="../../public/images/friendlink-2.webp" alt="">
+        <img src="../../public/images/friendlink-3.webp" alt="">
+        <img src="../../public/images/friendlink-4.webp" alt="">
+        <img src="../../public/images/friendlink-5.webp" alt="">
+        <img src="../../public/images/friendlink-6.webp" alt="">
+        <img src="../../public/images/friendlink-7.webp" alt="">
+        <img src="../../public/images/friendlink-8.webp" alt="">
+        </div>
+      </div>
+    <div class="footer">
+        <div class="top">
+            <ul>
+                <li><img src="../../public/images/footer-top-one.webp" alt="" ><h4>满100元全国包邮</h4><span>全场订单满1000元全国包邮</span></li>
+                <li><img src="../../public/images/footer-top-two.webp" alt=""><h4>下单送精美礼品</h4><span>本店购买任意商品赠送精美礼品</span></li>
+                <li><img src="../../public/images/footer-top-surry.webp" alt=""><h4>贴心的售后服务</h4><span>7×24小时售后随时为您服务</span></li>
+                <li><img src="../../public/images/footer-top-foru.webp" alt=""><h4>店铺优惠券</h4><span>每日整点可领取限量优惠券</span></li>
+            </ul>
+        </div>
+        <div class="concent">
+            <div><h4>关于产品</h4><span>本店商品非质量问题谢绝退换，如<br> 有质量问题，本店承担运费调换</span></div>
+            <div><h4>售后服务</h4><span>消費者保障服务
+               <br>七天无理由退款
+                <br>假一赔三</span></div>
+            <div><h4>退换货政策</h4><span>本店商品非质量问题谢绝退换，如<br> 有质量问题，本店承担运费调换</span></div>
+            <div><h4>售后服务</h4><span>本店商品非质量问题谢绝退换，如<br> 有质量问题，本店承担运费调换</span></div>
+            <div><h4>支付方式</h4><img src="../../public/images/银联.png" alt="">
+            <img src="../../public/images/支付宝.png" alt="">
+            <img src="../../public/images/微信.png" alt="">
+            </div>
+            <div><h4>关于商城</h4><span>本店商品非质量问题谢绝退换，如<br> 有质量问题，本店承担运费调换</span></div>
+            <div><h4>关于产品</h4><span>本店商品非质量问题谢绝退换，如<br> 有质量问题，本店承担运费调换</span></div>
+            <div><h4>SPORTING</h4><img src="../../public/images/二维码.webp" alt="" style="height: 100px; width: 100px;"><br><span>搜索微信号：HUAYU</span></div>
+        </div>
+        <div class="bottom">
+            <span class="iconfont icon-weibo"></span>
+            <span class="iconfont icon-weixin"></span>
+            <span class="iconfont icon-facebook"></span>
+            <span class="iconfont icon-tuite"></span>
+            <span class="iconfont icon-linkedin-in"></span>
+            <span class="iconfont icon-Youtube-fill"></span>
+                <p>Copyright © 2010-2015户外运动商品专卖 All rights reserved</p>
+        </div>
+    </div>
+    <script src="../../public/js/wow.min.js"></script>
+    <script src="../../public/js/up.js"></script>
+    <script src="../api/shopingShowAPI.js"></script>
+    <script src="../components/shopingShow.js"></script>
+    <script>
+       new WOW().init();
+    </script>
+  </body>
+</html>

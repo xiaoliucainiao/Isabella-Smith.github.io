@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/login.css" />
+    <script src="../utils/md5.js"></script>
+    <script src="../utils/jQuery.min.js"></script>
+    <script src="../utils/mock.js"></script>
+    <style>
+      font{
+        position: absolute;
+        right: 13px;
+        margin-top: 23px;
+        width: 80px;
+        opacity: 0;
+      }
+      .error {
+            color: red;
+            background: url(./img/error.png) no-repeat left center;
+        }
+        .top form{
+          margin-left: 43px;
+        }
+        .masking span{
+          margin-left: 43px;
+        }
+        .masking form input[type="checkbox"]{
+          position: absolute;
+          left: 109px;
+          margin: 0;
+        }
+        #fon{
+          vertical-align: -11px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <div class="left">
+        <span class="c92b2d5">企业网络</span>&emsp;<span class="c7096a7"
+          >管理系统</span
+        >
+        <p>快登录你的账号吧！</p>
+        <p>没有账号？</p>
+        <button type="submit">去注册</button>
+      </div>
+      <div class="right">
+        <span class="c92b2d5">企业网络</span>&emsp;<span class="c7096a7"
+          >管理系统</span
+        >
+        <p>快注册你的账号吧！</p>
+        <p>已有账号？</p>
+        <button type="submit">去登录</button>
+      </div>
+      <div class="masking">
+        <div class="top">
+          <span>LOGIN</span>
+          <form action="">
+            <input type="text" placeholder="用户名" /><br />
+            <input type="password" placeholder="密码" /> <br>
+            <input type="checkbox" style="width: 10px;" id="ck"><strong id="fon">保持登录状态</strong><br>
+            <button type="button" id="login">登录</button>
+          </form>
+        </div>
+        <div class="bottom">
+            <span>REGISTER</span>
+          <form action="user.html">
+            <input type="text" placeholder="账号4到16位且不包含-的特殊字符" /><font class="error">输入有误</font>
+            <input type="phone" id="phon" placeholder="用户名请输入中文" /><font class="error">输入有误</font>
+            <input type="phone"  id="numb" placeholder="请输入手机号" /><font class="error">输入有误</font>
+            <input type="password" placeholder="密码4到16位且不包含-的特殊字符" /><font class="error">输入有误</font>
+            <input type="password" placeholder="确认密码4到16位且不包含-的特殊字符" /><font class="error">密码不同</font><br>
+            <input type="phone" placeholder="编号4到16位且不包含-的特殊字符" id="number"/><font class="error">输入有误</font> 
+            <button type="button"  id="register">注册</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../utils/time.js"></script>
+    <script src="../components/login.js"></script>
+    <script src="../api/logAPI.js"></script>
+  </body>
+</html>
